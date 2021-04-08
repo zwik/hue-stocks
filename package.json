@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-hue-api": "^4.0.9",
+    "node-hue-api": "^4.0.10",
     "stock-info": "^1.2.0"
   },
   "devDependencies": {

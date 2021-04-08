@@ -12,15 +12,15 @@ setInterval(function() {
     si.getSingleStockInfo('NDAQ').then(stockinfo => {
       let state
       if (stockinfo.regularMarketChangePercent > 0) {
-        // groen
+        // green
         console.log(`Price is going up by ${stockinfo.regularMarketChangePercent}%`)
-        state = new lightState().on().brightness(100).saturation(100).hue(25500)
+        state = new lightState().on().brightness(50).saturation(100).hue(25500)
       } else {
-        // rood
+        // red
         console.log(`Price is going down by ${stockinfo.regularMarketChangePercent}%`)
-        state = new lightState().on().brightness(100).saturation(100).hue(0)
+        state = new lightState().on().brightness(50).saturation(100).hue(0)
       }
-      return api.lights.setLightState(11, state)
+      return api.lights.setLightState(1, state)
     })
   })
 }, 60000)
